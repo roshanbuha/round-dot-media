@@ -13,6 +13,7 @@
     "vite": "^8.0.10"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "@vitejs/plugin-react": "^6.0.1",
     "motion": "^12.38.0",
     "react": "^19.2.5",
