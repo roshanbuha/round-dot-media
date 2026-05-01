@@ -1,0 +1,260 @@
+.about-section {
+  background: var(--dark);
+  position: relative;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Visual Side */
+.about-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-logo-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 20px;
+  padding: 28px 32px;
+}
+
+.about-logo-icon {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.about-logo-big {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--purple-primary);
+  position: absolute;
+}
+
+.about-logo-small {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-15%, -55%);
+}
+
+.about-logo-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.about-logo-name span {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+
+/* Quote Card */
+.about-quote-card {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(124, 58, 237, 0.05));
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 20px;
+  padding: 28px 32px;
+}
+
+.about-quote-mark {
+  font-family: Georgia, serif;
+  font-size: 60px;
+  line-height: 0.5;
+  color: var(--purple-primary);
+  margin-bottom: 12px;
+}
+
+.about-quote {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-family: var(--font-heading);
+}
+
+.about-quote strong {
+  color: var(--purple-light);
+}
+
+.about-quote-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.about-author-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--purple-primary);
+  flex-shrink: 0;
+}
+
+/* Values */
+.about-values {
+  display: flex;
+  gap: 0;
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.about-value {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  border-right: 1px solid var(--dark-border);
+  text-align: center;
+}
+
+.about-value:last-child {
+  border-right: none;
+}
+
+.about-value-icon {
+  font-size: 18px;
+}
+
+.about-value-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+}
+
+/* Content Side */
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-title {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 16px;
+  color: var(--gray-light);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+/* Pillars */
+.about-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 24px 0 36px;
+  padding: 24px;
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 16px;
+}
+
+.about-pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.pillar-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--purple-primary);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.about-pillar strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.about-pillar span {
+  font-size: 13px;
+  color: var(--gray-light);
+}
+
+/* CTAs */
+.about-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-logo-card {
+    padding: 20px;
+  }
+  .about-quote-card {
+    padding: 20px;
+  }
+  .about-quote {
+    font-size: 17px;
+  }
+  .about-pillars {
+    padding: 18px;
+    gap: 12px;
+  }
+  .about-values {
+    flex-wrap: wrap;
+  }
+  .about-value {
+    flex: 1 1 40%;
+    border-right: none;
+    border-bottom: 1px solid var(--dark-border);
+  }
+  .about-value:nth-child(odd) {
+    border-right: 1px solid var(--dark-border);
+  }
+  .about-value:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+  .about-ctas {
+    flex-direction: column;
+  }
+  .about-ctas .btn-primary,
+  .about-ctas .btn-outline {
+    justify-content: center;
+    text-align: center;
+  }
+}

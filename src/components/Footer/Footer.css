@@ -1,0 +1,227 @@
+.footer {
+  background: var(--black);
+  position: relative;
+}
+
+/* 
+  IMPORTANT: Use padding-top / padding-bottom only here.
+  The .container class provides the horizontal padding (0 24px).
+  Using the shorthand `padding` would override and wipe out that horizontal padding.
+*/
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-top: 140px;
+  padding-bottom: 80px;
+}
+
+/* Brand */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.footer-logo-icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.footer-logo-big {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--purple-primary);
+  position: absolute;
+}
+
+.footer-logo-small {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-15%, -55%);
+}
+
+.footer-logo-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.footer-logo-name span {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.footer-tagline {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--purple-light);
+  margin-bottom: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--dark-border);
+}
+
+.footer-desc {
+  font-size: 15px;
+  color: var(--gray-light);
+  line-height: 1.7;
+}
+
+/* Columns */
+.footer-col {
+  min-width: 0;
+}
+
+.footer-col-title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  font-size: 15px;
+  color: var(--gray-light);
+  transition: color 0.25s;
+}
+
+.footer-links a:hover {
+  color: var(--purple-light);
+}
+
+.footer-email {
+  margin-top: 20px;
+  font-size: 15px;
+  color: var(--white);
+  font-weight: 500;
+  word-break: break-word;
+  transition: color 0.25s;
+}
+
+.footer-email:hover {
+  color: var(--purple-light);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid var(--dark-border);
+}
+
+/* Same rule: use padding-top/bottom only so .container horizontal padding survives */
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.footer-bottom-values {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-bottom-values span {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gray);
+  transition: color 0.25s;
+  cursor: pointer;
+}
+
+.footer-bottom-values span:hover {
+  color: var(--purple-light);
+}
+
+/* ─── Tablet ─────────────────────────────── */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    padding-top: 72px;
+    padding-bottom: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom-values {
+    gap: 16px;
+  }
+}
+
+/* ─── Mobile ─────────────────────────────── */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-top: 56px;
+    padding-bottom: 32px;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 28px;
+    gap: 10px;
+  }
+
+  .footer-bottom-values {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .footer-bottom-values span {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+  }
+
+  .footer-tagline {
+    font-size: 10px;
+  }
+
+  .footer-desc {
+    font-size: 13px;
+  }
+}
