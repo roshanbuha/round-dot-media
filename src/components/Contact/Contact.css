@@ -241,10 +241,12 @@
   .form-row {
     grid-template-columns: 1fr;
   }
+
   .contact-form-wrap {
     padding: 24px 20px;
     border-radius: 18px;
   }
+
   .contact-detail-item {
     padding: 14px;
   }
@@ -254,10 +256,12 @@
   .contact-social {
     gap: 8px;
   }
+
   .social-chip {
     padding: 7px 14px;
     font-size: 12px;
   }
+
   .contact-text {
     font-size: 15px;
   }

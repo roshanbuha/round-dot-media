@@ -16,51 +16,7 @@ export default function About() {
   return (
     <section id="about" className="section about-section" ref={ref}>
       <div className="container about-container">
-        {/* Left — Visual */}
-        <motion.div
-          className="about-visual"
-          initial={{ opacity: 0, x: -40, filter: 'blur(10px)' }}
-          animate={inView ? { opacity: 1, x: 0, filter: 'blur(0px)' } : {}}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <div className="about-logo-card">
-            <div className="about-logo-icon">
-              <div className="about-logo-big" />
-              <div className="about-logo-small" />
-            </div>
-            <div className="about-logo-name">
-              <span>Round Dot</span>
-              <span>Media</span>
-            </div>
-          </div>
 
-          <div className="about-quote-card">
-            <div className="about-quote-mark">"</div>
-            <p className="about-quote">
-              Good content isn't just seen, it's <strong>felt.</strong>
-            </p>
-            <div className="about-quote-author">
-              <div className="about-author-dot" />
-              <span>Round Dot Media</span>
-            </div>
-          </div>
-
-          {/* Values Row */}
-          <div className="about-values">
-            {values.map((v, i) => (
-              <motion.div
-                key={v.label}
-                className="about-value"
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.4 + i * 0.1, duration: 0.5 }}
-              >
-                <span className="about-value-icon">{v.icon}</span>
-                <span className="about-value-label">{v.label}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Right — Text */}
         <motion.div
