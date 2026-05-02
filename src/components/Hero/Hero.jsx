@@ -1,8 +1,44 @@
 import { useRef, useEffect } from 'react'
-import { motion, useScroll, useTransform } from 'motion/react'
+import { motion, useScroll, useTransform, useInView } from 'motion/react'
 import './Hero.css'
 
 const WORDS = ['Visual Stories', 'Brand Films', 'Bold Content', 'Your Vision']
+
+function AnimatedStat({ numStr }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+  
+  const match = numStr.match(/^([\d.]+)(.*)$/)
+  const targetValue = match ? parseFloat(match[1]) : 0
+  const suffix = match ? match[2] : ''
+  const isFloat = match && match[1].includes('.')
+
+  useEffect(() => {
+    if (!isInView) return
+    
+    let startTime
+    const duration = 2000
+
+    const updateCounter = (timestamp) => {
+      if (!startTime) startTime = timestamp
+      const progress = Math.min((timestamp - startTime) / duration, 1)
+      const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress)
+      const current = ease * targetValue
+
+      if (ref.current) {
+        ref.current.textContent = (isFloat ? current.toFixed(1) : Math.round(current)) + suffix
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter)
+      }
+    }
+
+    requestAnimationFrame(updateCounter)
+  }, [isInView, targetValue, suffix, isFloat])
+
+  return <span ref={ref}>0{suffix}</span>
+}
 
 export default function Hero() {
   const containerRef = useRef(null)
@@ -96,7 +132,9 @@ export default function Hero() {
             { number: '5★', label: 'Rating' },
           ].map((stat) => (
             <div key={stat.label} className="hero-stat">
-              <span className="hero-stat-number">{stat.number}</span>
+              <span className="hero-stat-number">
+                <AnimatedStat numStr={stat.number} />
+              </span>
               <span className="hero-stat-label">{stat.label}</span>
             </div>
           ))}
