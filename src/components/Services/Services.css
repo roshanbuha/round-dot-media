@@ -14,8 +14,12 @@
 }
 
 .services-header {
-  max-width: 600px;
-  margin-bottom: 64px;
+  max-width: 800px;
+  margin: 0 auto 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .services-title {

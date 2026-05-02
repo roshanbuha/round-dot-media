@@ -3,7 +3,8 @@
    ============================================= */
 
 /* Lenis Smooth Scroll Recommended CSS */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -51,7 +52,7 @@ html.lenis, html.lenis body {
 
   /* Spacing */
   --section-padding: 100px 0;
-  --container-max: 1200px;
+  --container-max: 100%;
 
   /* Transitions */
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -62,7 +63,9 @@ html.lenis, html.lenis body {
    RESET & BASE
    ============================================= */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -123,7 +126,7 @@ button {
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 40px;
 }
 
 .section {
@@ -156,8 +159,17 @@ button {
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(1.4); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.4);
+  }
 }
 
 .heading-xl {
@@ -247,7 +259,7 @@ button {
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
-  border: 1.5px solid rgba(255,255,255,0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
   transition: var(--transition-base);
 }
 
@@ -285,6 +297,7 @@ button {
   :root {
     --section-padding: 72px 0;
   }
+
   .container {
     padding: 0 20px;
   }
@@ -294,18 +307,23 @@ button {
   :root {
     --section-padding: 56px 0;
   }
+
   .container {
     padding: 0 16px;
   }
+
   .heading-xl {
     font-size: clamp(34px, 10vw, 56px);
   }
+
   .heading-lg {
     font-size: clamp(26px, 8vw, 42px);
   }
+
   .heading-md {
     font-size: clamp(20px, 6vw, 30px);
   }
+
   .btn-primary,
   .btn-outline {
     padding: 13px 24px;

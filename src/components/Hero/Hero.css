@@ -34,14 +34,31 @@
 }
 
 @keyframes float1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(-30px, 20px) scale(1.05); }
-  66% { transform: translate(20px, -20px) scale(0.95); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(-30px, 20px) scale(1.05);
+  }
+
+  66% {
+    transform: translate(20px, -20px) scale(0.95);
+  }
 }
 
 @keyframes float2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(30px, -30px) scale(1.08); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(30px, -30px) scale(1.08);
+  }
 }
 
 /* Grid Overlay */
@@ -56,8 +73,13 @@
 }
 
 @keyframes grid-scroll {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 60px; }
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 60px;
+  }
 }
 
 /* Content */
@@ -66,7 +88,7 @@
   z-index: 2;
   padding-top: 120px;
   padding-bottom: 80px;
-  max-width: 760px;
+  max-width: 100%;
 }
 
 .hero-tag {
@@ -88,7 +110,7 @@
   font-size: 18px;
   color: var(--gray-light);
   line-height: 1.7;
-  max-width: 560px;
+  max-width: 800px;
   margin-bottom: 40px;
 }
 
@@ -116,7 +138,8 @@
 .hero-stats {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
+  max-width: 800px;
   flex-wrap: wrap;
 }
 
@@ -173,9 +196,23 @@
 }
 
 @keyframes scroll-anim {
-  0% { opacity: 0; transform: scaleY(0); transform-origin: top; }
-  50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
-  100% { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
 }
 
 @media (max-width: 768px) {
@@ -183,21 +220,26 @@
     padding-top: 100px;
     text-align: center;
   }
+
   .hero-subtitle {
     max-width: 100%;
     font-size: 16px;
   }
+
   .hero-ctas {
     justify-content: center;
   }
+
   .hero-stats {
     justify-content: center;
     gap: 24px;
   }
+
   .hero-stats .hero-stat:not(:last-child) {
     padding-right: 24px;
     border-right: 1px solid var(--dark-border);
   }
+
   .hero-tag {
     margin: 0 auto 24px;
   }
@@ -208,28 +250,34 @@
     padding-top: 90px;
     padding-bottom: 60px;
   }
+
   .hero-stats {
     gap: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
   }
+
   .hero-stat {
     padding: 12px 0;
     align-items: center;
     border-bottom: 1px solid var(--dark-border);
   }
+
   .hero-stats .hero-stat:not(:last-child) {
     padding-right: 0;
     border-right: none;
   }
+
   .hero-stat:nth-child(1),
   .hero-stat:nth-child(2) {
     border-bottom: 1px solid var(--dark-border);
   }
+
   .hero-stat-number {
     font-size: 24px;
   }
+
   .scroll-indicator {
     display: none;
   }

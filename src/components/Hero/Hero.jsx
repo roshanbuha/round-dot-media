@@ -40,7 +40,7 @@ export default function Hero() {
               We <span className="text-gradient">Create.</span>
             </motion.span>
           </div>
-          <br />
+          {' '}
           <div style={{ overflow: 'hidden', display: 'inline-block' }}>
             <motion.span
               style={{ display: 'inline-block' }}

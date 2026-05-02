@@ -16,8 +16,12 @@
 }
 
 .work-header {
-  max-width: 660px;
-  margin-bottom: 40px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .work-title {
@@ -39,6 +43,7 @@
 .work-filters {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
   margin-bottom: 40px;
 }
