@@ -1,0 +1,91 @@
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.loader-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.loader-logo-icon {
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+
+.loader-circle-big {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--purple-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+.loader-circle-small {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, -50%);
+}
+
+.loader-text {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.05em;
+}
+
+.loader-progress-wrapper {
+  width: 100%;
+  height: 2px;
+  background: var(--dark-border);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader-progress-bar {
+  height: 100%;
+  background: var(--purple-primary);
+}
+
+.loader-percentage {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.02em;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px var(--purple-glow);
+  }
+  50% {
+    box-shadow: 0 0 35px var(--purple-primary);
+  }
+}

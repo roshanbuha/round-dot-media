@@ -9,6 +9,7 @@ import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import AnimatedBackground from './components/AnimatedBackground/AnimatedBackground'
+import Loader from './components/Loader/Loader'
 
 function App() {
   useEffect(() => {
@@ -44,6 +45,7 @@ function App() {
 
   return (
     <>
+      <Loader />
       <AnimatedBackground />
       <Navbar />
       <Hero />
